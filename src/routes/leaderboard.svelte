@@ -1,6 +1,8 @@
 <script lang="ts">
   import Meta from '$lib/Meta.svelte'
   import AuthPage from '$lib/Auth/AuthPage.svelte'
+  import { setContext } from 'svelte'
+  setContext('currentPage', '/leaderboard')
 </script>
 
 <Meta

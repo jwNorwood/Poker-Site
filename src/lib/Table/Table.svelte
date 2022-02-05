@@ -5,13 +5,6 @@
   import Bet from "./Bet.svelte";
   import Hand from "./Hand.svelte";
   const players = []
-  // things we will get from the api
-  // how many players there are and in what posion
-  // cards in the middle
-  // who the action is on
-  // who bet
-  // who folded
-
 </script>
 
 

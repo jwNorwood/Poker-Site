@@ -6,7 +6,7 @@
     position: 0,
     seat: 0,
     bet: 0,
-    folded: false,
+    inHand: false,
     allIn: false,
     hand: [],
     timeBank: 0,
@@ -22,5 +22,4 @@
   <Avatar image={player.avatar} />
   {player.name}
   <ChipCount chips={player.chipCount} blindSize={blindSize} />
-  {player.position}
 </div>
