@@ -1,6 +1,6 @@
 <script lang="ts">
   import '../global.postcss'
-  import { theme } from './store'
+  import { theme } from '../stores/store'
   import { onMount } from 'svelte'
 
   onMount(() => {

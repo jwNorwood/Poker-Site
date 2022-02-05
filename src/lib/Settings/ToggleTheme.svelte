@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { theme } from '../routes/store'
+  import { theme } from '../../stores/store'
 
   const toggleTheme = () => {
     $theme = $theme === 'dark' ? 'light' : 'dark'

@@ -11,8 +11,8 @@
 />
 
 <Page>
-  <h1 class="text-5xl font-extrabold mb-2">This site is prety cool, sign up today</h1>
-  <a href="/create-account">Create and Account</a>
+  <h1 class="text-5xl font-extrabold mb-2">Login</h1>
+  <a href="/find-table">Login</a>
 </Page>
 
 <style lang="postcss">

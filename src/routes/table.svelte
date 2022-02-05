@@ -1,6 +1,6 @@
 <script lang="ts">
   import Meta from '$lib/Meta.svelte'
-  import Page from '$lib/Regular/Page.svelte'
+  import AuthPage from '$lib/Auth/AuthPage.svelte'
 </script>
 
 <Meta
@@ -10,10 +10,9 @@
   image=""
 />
 
-<Page>
-  <h1 class="text-5xl font-extrabold mb-2">This site is prety cool, sign up today</h1>
-  <a href="/create-account">Create and Account</a>
-</Page>
+<AuthPage>
+  <h1 class="text-5xl font-extrabold mb-2">Tables</h1>
+</AuthPage>
 
 <style lang="postcss">
 </style>
