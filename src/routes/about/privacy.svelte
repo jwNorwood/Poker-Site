@@ -1,9 +1,9 @@
 <script lang="ts">
   import Meta from '$lib/Meta.svelte'
   import Page from '$lib/Regular/Page.svelte'
+  import Button from '$lib/Button.svelte';
   import { setContext } from 'svelte'
-  setContext('currentPage', '/about')
-  
+  setContext('currentPage', '/about/privacy')
 </script>
 
 <Meta
@@ -14,7 +14,7 @@
 />
 
 <Page>
-  <h1 class="text-5xl font-extrabold mb-2">About</h1>
+  <h1 class="text-5xl font-extrabold mb-2">Privacy</h1>
 </Page>
 
 <style lang="postcss">

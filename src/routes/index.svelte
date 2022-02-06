@@ -23,6 +23,12 @@
     <a href="/create-account">
       <Button>Create Account</Button>
     </a>
+    <a href="/create-account">
+      <Button light>Create Account</Button>
+    </a>
+      <a href="/create-account">
+      <Button dark>Create Account</Button>
+    </a>
   </Hero>
   <Row>
     <Section>

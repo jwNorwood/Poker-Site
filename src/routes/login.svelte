@@ -1,4 +1,5 @@
 <script lang="ts">
+  import LoginForm from '$lib/Forms/LoginForm.svelte'
   import Meta from '$lib/Meta.svelte'
   import Page from '$lib/Regular/Page.svelte'
   
@@ -15,7 +16,7 @@
 
 <Page>
   <h1 class="text-5xl font-extrabold mb-2">Login</h1>
-  <a href="/find-table">Login</a>
+  <LoginForm />
 </Page>
 
 <style lang="postcss">

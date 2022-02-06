@@ -1,9 +1,9 @@
 <script lang="ts">
-  import CreateAccount from '$lib/Forms/CreateAccount.svelte'
   import Meta from '$lib/Meta.svelte'
   import Page from '$lib/Regular/Page.svelte'
+  import Button from '$lib/Button.svelte';
   import { setContext } from 'svelte'
-  setContext('currentPage', '/create-account')
+  setContext('currentPage', '/about/terms')
 </script>
 
 <Meta
@@ -14,9 +14,7 @@
 />
 
 <Page>
-  <h1 class="text-5xl font-extrabold mb-2">Sign Up</h1>
-  <p class="text-xl mb-4">Create an account to play free poker.</p>
-  <CreateAccount />
+  <h1 class="text-5xl font-extrabold mb-2">Terms</h1>
 </Page>
 
 <style lang="postcss">
