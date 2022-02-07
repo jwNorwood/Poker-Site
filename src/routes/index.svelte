@@ -79,8 +79,6 @@
       </h2>
       <p class="mb-4">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, aliquam accusamus.
-        Dolores natus eum temporibus distinctio ut veritatis dolorem illum vel! Dolor neque suscipit
-        aut ullam molestiae quaerat voluptate repudiandae.
       </p>
     </Section>
     <Section noBg>
@@ -88,8 +86,7 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </h2>
       <p class="mb-4">
-        Dolores natus eum temporibus distinctio ut veritatis dolorem illum vel! Dolor neque suscipit
-        aut ullam molestiae quaerat voluptate repudiandae.
+        Dolor neque suscipit aut ullam molestiae quaerat voluptate repudiandae.
       </p>
     </Section>
     <Section>

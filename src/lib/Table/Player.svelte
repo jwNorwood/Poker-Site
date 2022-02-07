@@ -13,13 +13,27 @@
     timeBankUsed: 0,
     avatar: '',
     actionIsOn: false,
-    name: '',
+    name: ''
   }
-  export let blindSize = 0
+  export let blindSize = 1
 </script>
 
-<div>
+<div class="user">
   <Avatar image={player.avatar} />
-  {player.name}
-  <ChipCount chips={player.chipCount} blindSize={blindSize} />
+  <div class="user-info">
+    <div class="user-name">{player.name}</div>
+    <ChipCount chips={player.chipCount} {blindSize} />
+  </div>
 </div>
+
+<style lang="postcss">
+  .user {
+    @apply flex items-center bg-green-50 border-green-700 border-t-2 border-b-2 border-l-2 border-r-2 rounded-full shadow-md w-max px-2 py-1;
+  }
+  .user-info {
+    @apply px-2;
+  }
+  .user-name {
+    @apply font-bold;
+  }
+</style>

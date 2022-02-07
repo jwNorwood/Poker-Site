@@ -5,8 +5,16 @@
   let curentBlinds = (chips / blindSize).toFixed(2)
 </script>
 
-{#if !!chipCountInBlinds}
-  {chips}
-{:else}
-  {curentBlinds}
-{/if}
+<div class="chip-count">
+  {#if !!chipCountInBlinds}
+    ${chips}
+  {:else}
+    BB{curentBlinds}
+  {/if}
+</div>
+
+<style lang="postcss">
+  .chip-count {
+    @apply font-bold text-green-900;
+  }
+</style>

@@ -1,6 +1,7 @@
 <script lang="ts">
   export let noBg: boolean = false
   export let backgroundImage: string = ""
+  export let centerText: boolean = false;
   import { theme } from '../stores/store'
   const dark = $theme === 'dark'
 </script>
@@ -9,6 +10,7 @@
   class:noBg
   class:backgroundImage
   class:dark
+  class:centerText
   style="background-image: url('{backgroundImage}')"
 >
   <div class="px-8">
@@ -16,7 +18,7 @@
   </div>
 </section>
 
-<style>
+<style lang="postcss">
   section {
     @apply py-16 my-4 md:flex-1 bg-green-100 rounded-xl shadow-md;
   }
@@ -25,6 +27,9 @@
   }
   .noBg {
     background-color: transparent !important;
+  }
+  .centerText {
+    @apply text-center;
   }
   .backgroundImage {
     @apply bg-cover bg-center text-white;
