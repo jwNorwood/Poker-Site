@@ -18,11 +18,35 @@
   export let blindSize = 1
   export let left = false;
   export let right = false;
+  export let visualPosition;
+
+  let positionClass = ''
+  
+  switch (visualPosition) {
+    case 0:
+      positionClass = 'bottom-left'
+      break;
+    case 1:
+      positionClass = 'top-left'
+      break;
+    case 2:
+      positionClass = 'center'
+      break;
+    case 3:
+      positionClass = 'top-right'
+      break;
+    case 4:
+      positionClass = 'bottom-right'
+      break;
+    default:
+      positionClass = 'center'
+      break;
+  }
   let actionIsOn = player.actionIsOn;
   let inHand = player.inHand;
 </script>
 
-<div class="user" class:left class:right class:inHand class:actionIsOn>
+<div class={`user ${positionClass}`} class:left class:right class:inHand class:actionIsOn class:visualPosition>
   <Avatar image={player.avatar} />
   <div class="user-info">
     <div class="user-name">{player.name}</div>
@@ -53,4 +77,33 @@
   .user-name {
     @apply font-bold text-green-800 overflow-ellipsis;
   }
+
+  .bottom-left.user {
+    position: absolute;
+    left: calc(50% - 250px);
+    top: 200px;
+  }
+  .top-left.user {
+    position: absolute;
+    left: calc(50% - 250px);
+    
+    top: 100px;
+  }
+  .center.user {
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    transform: translate(-50%, -50%);
+  }
+  .top-right.user {
+    position: absolute;
+    left: calc(50% + 100px);
+    top: 100px;
+  }
+  .bottom-right.user {
+    position: absolute;
+    left: calc(50% + 100px);
+    top: 200px;
+  }
+
 </style>
