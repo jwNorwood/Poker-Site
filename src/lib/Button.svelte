@@ -5,7 +5,6 @@
 </script>
 
 <button 
-  class=""
   class:light
   class:dark
   on:click={action()}
