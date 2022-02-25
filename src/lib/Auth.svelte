@@ -6,16 +6,18 @@
   import { goto } from '$app/navigation'
   let auth0Client
 
+  let loggedIn = $isAuthenticated
+
   onMount(async () => {
     auth0Client = await auth.createClient()
-
-    isAuthenticated.set(await auth0Client.isAuthenticated())
-    user.set(await auth0Client.getUser())
   })
 
   const login = async () => {
     const success = await auth.loginWithPopup(auth0Client)
     if (success) {
+      loggedIn = true
+      isAuthenticated.set(await auth0Client.isAuthenticated())
+      user.set(await auth0Client.getUser())
       goto('/dashboard')
     }
   }
@@ -23,14 +25,15 @@
   const logout = async () => {
     const success = await auth.logout(auth0Client)
     if (success) {
+      isAuthenticated.set(false)
+      loggedIn = false
       goto('/')
     }
   }
-
 </script>
 
-{#if !$isAuthenticated}
-  <Button action={login} light>Login</Button>
-{:else}
+{#if loggedIn}
   <Button action={logout} dark>Logout</Button>
+{:else}
+  <Button action={login} light>Login</Button>
 {/if}

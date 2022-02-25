@@ -1,7 +1,10 @@
 <script lang="ts">
+  import { getContext } from 'svelte'
+  let currentPage = getContext('currentPage')
   export let href: string = "/";
   export let name: string = "";
-  export let active: boolean = false;
+  
+  $: active = currentPage === href;
 </script>
 
 <div>
@@ -9,3 +12,9 @@
     {name}
   </a>
 </div>
+
+<style lang="postcss">
+  .active {
+    @apply font-bold;
+  }
+</style>

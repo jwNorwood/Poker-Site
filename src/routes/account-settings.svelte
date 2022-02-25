@@ -3,7 +3,7 @@
   import AuthPage from '$lib/Auth/AuthPage.svelte'
   import ToggleTheme from '$lib/Settings/ToggleTheme.svelte';
   import { setContext } from 'svelte'
-  setContext('currentPage', '/account-setting')
+  setContext('currentPage', '/account-settings')
 </script>
 
 <Meta

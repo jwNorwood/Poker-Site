@@ -5,7 +5,7 @@
   import Button from '$lib/Button.svelte'
   import Section from '$lib/Section.svelte'
   import Row from '$lib/Row.svelte'
-  setContext('currentPage', '/find-table')
+  setContext('currentPage', '/dashboard')
 </script>
 
 <Meta

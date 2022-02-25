@@ -14,6 +14,5 @@ export default {
 
   kit: {
     adapter: ssr(),
-    target: '#svelte'
   }
 }
