@@ -5,7 +5,7 @@
 </script>
 
 <Nav>
-  <NavItem href="/dashboard" name="Dashboard" />
+  <NavItem href="/play" name="Dashboard" />
   <NavItem href="/leaderboard" name="Leaderboard" />
   <NavItem href="/account-settings" name="Account Settings" />
   <Auth />

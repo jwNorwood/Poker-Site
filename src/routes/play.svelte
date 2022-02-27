@@ -6,12 +6,12 @@
   import Section from '$lib/Section.svelte'
   import Row from '$lib/Row.svelte'
   import { user } from "../stores/auth";   
-  setContext('currentPage', '/dashboard')
+  setContext('currentPage', '/play')
 </script>
 
 <Meta
-  description="A simple Svelte component to toggle between dark and light theme."
-  title="Toggle Theme"
+  description="Play free matchmaking poker with heads up texas holdem or six player sit and go."
+  title="Ranked Matchmaking Poker"
   keywords="account, create account, free poker"
   image=""
 />

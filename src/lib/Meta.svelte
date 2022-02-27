@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { websiteUrl } from "./../stores/store";
   export let description: string = "";
   export let keywords: string = "";
   export let title: string = "";
   export let image: string;
+  const websiteUrl = "http://example.com";
 </script>
   
 <svelte:head>
@@ -15,7 +15,7 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content={$websiteUrl} />
+  <meta property="og:url" content={websiteUrl} />
   <meta property="og:title" content={description} />
   <meta property="og:description" content={description} />
   {#if !!image}

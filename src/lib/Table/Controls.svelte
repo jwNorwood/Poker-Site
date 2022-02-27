@@ -26,7 +26,7 @@
   </div>
 
   <div class="user">
-    <Avatar image={player.avatar} large/>
+    <Avatar image={player.user.avatar} large/>
     <ChipCount chips={player.chipCount} />
   </div>
 

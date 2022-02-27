@@ -15,10 +15,12 @@
       hand: [],
       timeBank: 0,
       timeBankUsed: 0,
-      avatar: '/avatars/01.png',
       actionIsOn: false,
-      name: 'Big Fish',
-      id: 1
+      user: {
+        avatar: '/avatars/01.png',
+        name: 'Big Fish',
+        id: 1
+      }
     },
     {
       chipCount: 1400,
@@ -30,10 +32,12 @@
       hand: [],
       timeBank: 0,
       timeBankUsed: 0,
-      avatar: '/avatars/3DDD-1.png',
       actionIsOn: false,
-      name: 'Papa Shark',
-      id: 2
+      user: {
+        avatar: '/avatars/3DDD-1.png',
+        name: 'Papa Shark',
+        id: 2
+      }
     },
     {
       chipCount: 900,
@@ -45,10 +49,12 @@
       hand: [],
       timeBank: 0,
       timeBankUsed: 0,
-      avatar: '/avatars/3DDD-2.png',
       actionIsOn: false,
-      name: 'Bad Guy',
-      id: 3
+      user: {
+        name: 'Bad Guy',
+        avatar: '/avatars/3DDD-2.png',
+        id: 3
+      }
     },
     {
       chipCount: 800,
@@ -60,10 +66,12 @@
       hand: [],
       timeBank: 0,
       timeBankUsed: 0,
-      avatar: '/avatars/3DDD-3.png',
       actionIsOn: true,
-      name: 'Good Guy',
-      id: 4
+      user: {
+        name: 'Good Guy',
+        avatar: '/avatars/3DDD-3.png',
+        id: 4
+      }
     },
     {
       chipCount: 2100,
@@ -75,10 +83,12 @@
       hand: [],
       timeBank: 0,
       timeBankUsed: 0,
-      avatar: '/avatars/3DDD-4.png',
       actionIsOn: false,
-      name: 'Free Money',
-      id: 5
+      user: {
+        avatar: '/avatars/3DDD-4.png',
+        name: 'Free Money',
+        id: 5
+      }
     }
   ]
   const self = {
@@ -91,10 +101,13 @@
     hand: [],
     timeBank: 0,
     timeBankUsed: 0,
-    avatar: '/avatars/01.png',
     actionIsOn: false,
     name: '',
-    id: 1
+    user: {
+      avatar: '/avatars/01.png',
+      id: 1,
+      name: 'Unseen'
+    }
   }
   let currentBet = 0
 

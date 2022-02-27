@@ -11,7 +11,7 @@
 </script>
 
 <Meta
-  description="A simple Svelte component to toggle between dark and light theme."
+  description="Placeholder for the game table"
   title="Table Time"
   keywords="account, create account, free poker"
   image=""

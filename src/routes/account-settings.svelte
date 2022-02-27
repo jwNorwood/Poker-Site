@@ -7,7 +7,7 @@
 </script>
 
 <Meta
-  description="A simple Svelte component to toggle between dark and light theme."
+  description="Set your avatar, card, sounds, and other settings."
   title="Account Settings"
   keywords="account, create account, free poker"
   image=""

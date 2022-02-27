@@ -10,7 +10,7 @@
     const auth0Client = await auth.createClient()
     const success = await auth.loginWithPopup(auth0Client)
     if (success) {
-      goto('/dashboard')
+      goto('/play')
     }
   }
 
@@ -24,7 +24,7 @@
 </script>
 
 {#if loggedIn}
-  <Button action={logout} dark>Logout</Button>
+  <Button action={logout} dark small>Logout</Button>
 {:else}
-  <Button action={login} light>Login</Button>
+  <Button action={login} small>Login / Create Account</Button>
 {/if}

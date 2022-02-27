@@ -1,6 +1,14 @@
 <script>
   import AuthMenu from './AuthMenu.svelte'
+  import LoginToView from './LoginToView.svelte'
+  import { isAuthenticated } from '../../stores/auth'
+import Menu from '$lib/Regular/Menu.svelte';
 </script>
 
-<AuthMenu />
-<slot />
+{#if !!$isAuthenticated}
+  <AuthMenu />
+  <slot />
+{:else}
+  <Menu />
+  <LoginToView />
+{/if}
