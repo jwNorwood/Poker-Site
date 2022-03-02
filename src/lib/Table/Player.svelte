@@ -51,36 +51,49 @@
 </script>
 
 <div
-  class={`user ${positionClass}`}
+  class={`${positionClass} wrapper`}
   class:left
   class:right
   class:inHand
   class:actionIsOn
   class:visualPosition
 >
-  <Avatar image={player.user.avatar} />
-  <div class="user-info">
-    <div class="user-name">{player.user.name}</div>
-    <ChipCount chips={player.chipCount} {blindSize} />
+  <div class="user">
+    <Avatar image={player.user.avatar} />
+    <div class="user-info">
+      <div class="user-name">{player.user.name}</div>
+      <ChipCount chips={player.chipCount} {blindSize} />
+    </div>
   </div>
+  <Bet size={player.bet} {positionClass} />
 </div>
-<Bet size={player.bet} positionClass={positionClass} />
 
 <style lang="postcss">
-  .right.user {
+  .wrapper {
+    display: flex;
+    @apply flex-row-reverse items-center;
+  }
+  .wrapper.right {
+    @apply flex-row;
+  }
+  .right .user {
     @apply flex-row-reverse;
   }
-  .user {
-    @apply flex items-center bg-gray-100 border-gray-500 border-4 rounded-full shadow-md px-2 py-1 my-2;
-    max-width: 200px;
+  .center.wrapper {
+    @apply flex-col text-center
   }
-  .user.inHand {
+  .user {
+    @apply flex items-center bg-gray-100 border-gray-500 border-4 rounded-full shadow-md px-2 py-1 m-4;
+    max-width: 200px;
+    height: 100px;
+  }
+  .inHand .user {
     @apply bg-green-100 border-green-700 border-4;
   }
-  .user.actionIsOn {
+  .actionIsOn .user{
     @apply border-red-600 border-4 bg-red-50;
   }
-  .user.actionIsOn .user-name {
+  .actionIsOn .user .user-name {
     @apply text-red-600;
   }
   .user-info {
@@ -90,31 +103,24 @@
     @apply font-bold text-green-800 overflow-ellipsis;
   }
 
-  .bottom-left.user {
-    position: absolute;
-    left: calc(50% - 250px);
-    top: 200px;
+  .bottom-left {
+    grid-area: bottom-left;
+    margin: 0 auto;
   }
-  .top-left.user {
-    position: absolute;
-    left: calc(50% - 250px);
-
-    top: 100px;
+  .top-left {
+    grid-area: top-left;
+    margin: 0 auto;
   }
-  .center.user {
-    position: absolute;
-    left: 50%;
-    top: 50px;
-    transform: translate(-50%, -50%);
+  .center {
+    grid-area: center;
+    margin: 0 auto;
   }
-  .top-right.user {
-    position: absolute;
-    left: calc(50% + 100px);
-    top: 100px;
+  .top-right {
+    grid-area: top-right;
+    margin: 0 auto;
   }
-  .bottom-right.user {
-    position: absolute;
-    left: calc(50% + 100px);
-    top: 200px;
+  .bottom-right {
+    grid-area: bottom-right;
+    margin: 0 auto;
   }
 </style>

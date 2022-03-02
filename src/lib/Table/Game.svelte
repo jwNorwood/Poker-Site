@@ -121,23 +121,34 @@
   const playersWithSeats = [...lateSeats, ...earlySeats]
 </script>
 
-<div>
-  <div class="game-table">
-    {#each playersWithSeats as player, index}
-      {#if index < 2}
-        <Player {player} right visualPosition={index} />
-      {:else}
-        <Player {player} visualPosition={index} />
-      {/if}
-    {/each}
-  </div>
-
-  <Hand />
-  <Controls minBet={0} maxBet={self.chipCount} betSize={currentBet} player={self} />
+<div class="game-table">
+  <div class="table" />
+  {#each playersWithSeats as player, index}
+    {#if index < 2}
+      <Player {player} right visualPosition={index} />
+    {:else}
+      <Player {player} visualPosition={index} />
+    {/if}
+  {/each}
 </div>
+
+<Hand />
+<Controls minBet={0} maxBet={self.chipCount} betSize={currentBet} player={self} />
 
 <style lang="postcss">
   .game-table {
-    @apply relative h-72 w-full;
+    @apply relative w-full;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      '. center .'
+      'top-left table top-right'
+      'bottom-left table bottom-right';
+    grid-gap: 1rem;
+  }
+  .table {
+    @apply bg-green-300 h-full w-full rounded-t-full border-4 border-green-500;
+    grid-area: table;
   }
 </style>
