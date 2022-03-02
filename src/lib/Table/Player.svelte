@@ -70,8 +70,8 @@
 
 <style lang="postcss">
   .wrapper {
-    display: flex;
-    @apply flex-row-reverse items-center;
+    @apply flex flex-row-reverse items-center;
+    margin: 0 auto;
   }
   .wrapper.right {
     @apply flex-row;
@@ -105,22 +105,17 @@
 
   .bottom-left {
     grid-area: bottom-left;
-    margin: 0 auto;
   }
   .top-left {
     grid-area: top-left;
-    margin: 0 auto;
   }
   .center {
     grid-area: center;
-    margin: 0 auto;
   }
   .top-right {
     grid-area: top-right;
-    margin: 0 auto;
   }
   .bottom-right {
     grid-area: bottom-right;
-    margin: 0 auto;
   }
 </style>
