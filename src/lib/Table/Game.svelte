@@ -4,7 +4,7 @@
   import Controls from './Controls.svelte'
   import Bet from './Bet.svelte'
   import Hand from './Hand.svelte'
-  const players = [
+  let players = [
     {
       chipCount: 1120,
       seat: 1,
@@ -60,7 +60,7 @@
       chipCount: 800,
       seat: 4,
       position: 0,
-      bet: 0,
+      bet: 200,
       inHand: true,
       allIn: false,
       hand: [],
@@ -77,7 +77,7 @@
       chipCount: 2100,
       seat: 5,
       position: 0,
-      bet: 0,
+      bet: 600,
       inHand: true,
       allIn: false,
       hand: [],
@@ -91,7 +91,7 @@
       }
     }
   ]
-  const self = {
+  let self = {
     chipCount: 1100,
     seat: 2,
     position: 0,
@@ -109,20 +109,33 @@
       name: 'Unseen'
     }
   }
-  let currentBet = 0
+
+  $: currentBet = players
+    .filter(player => player.bet > 0)
+    .reduce((acc, player) => {
+      return player.bet > acc ? player.bet : acc
+    }, 0)
+  let currentPot = 400
 
   const sortedPlayers = players.sort((a, b) => {
     if (a.seat < b.seat) {
       return -1
     }
   })
+
+  $: bets = players.reduce((acc, player) => {
+    return acc + player.bet
+  }, self.bet)
+
   const earlySeats = sortedPlayers.filter(player => player.seat < self.seat)
   const lateSeats = sortedPlayers.filter(player => player.seat >= self.seat)
   const playersWithSeats = [...lateSeats, ...earlySeats]
 </script>
 
 <div class="game-table">
-  <div class="table" />
+  <div class="table">
+    <Pot pot={currentPot + bets} />
+  </div>
   {#each playersWithSeats as player, index}
     {#if index < 2}
       <Player {player} right visualPosition={index} />
@@ -148,7 +161,7 @@
     grid-gap: 1rem;
   }
   .table {
-    @apply bg-green-300 h-full w-full rounded-t-full border-4 border-green-500;
+    @apply bg-green-300 h-full w-full rounded-t-full border-4 border-green-500 text-center justify-center flex-col flex-1 flex;
     grid-area: table;
   }
 </style>

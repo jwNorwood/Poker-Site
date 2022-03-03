@@ -65,7 +65,7 @@
       <ChipCount chips={player.chipCount} {blindSize} />
     </div>
   </div>
-  <Bet size={player.bet} {positionClass} />
+  <Bet size={player.bet}/>
 </div>
 
 <style lang="postcss">

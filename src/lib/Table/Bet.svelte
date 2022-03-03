@@ -1,21 +1,15 @@
 <script lang="ts">
   export let size = 0
-  export let positionClass = ''
 </script>
 
-<div class={`${positionClass}`}>
-  ${size},000
-</div>
+{#if (size > 0)}
+  <div class="bet">
+    ${size}
+  </div>
+{/if}
 
 <style lang="postcss">
-  .bottom-left {
-  }
-  .top-left {
-  }
-  .center {
-  }
-  .top-right {
-  }
-  .bottom-right {
+  .bet {
+    @apply font-bold
   }
 </style>
