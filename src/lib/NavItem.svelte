@@ -7,11 +7,9 @@
   $: active = currentPage === href;
 </script>
 
-<div>
-  <a href={href} class="" class:active>
-    {name}
-  </a>
-</div>
+<a href={href} class="" class:active>
+  {name}
+</a>
 
 <style lang="postcss">
   .active {
