@@ -1,8 +1,10 @@
 <script lang="ts">
-  import { getContext } from 'svelte'
-  let currentPage = getContext('currentPage')
+  import { onMount } from 'svelte';
   export let href: string = "/";
   export let name: string = "";
+  let currentPage  = ``;
+
+  onMount(() => currentPage = window.location.pathname);  
   
   $: active = currentPage === href;
 </script>

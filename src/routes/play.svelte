@@ -1,12 +1,10 @@
 <script lang="ts">
   import Meta from '$lib/Meta.svelte'
   import AuthPage from '$lib/Auth/AuthPage.svelte'
-  import { setContext } from 'svelte'
   import Button from '$lib/Button.svelte'
   import Section from '$lib/Section.svelte'
   import Row from '$lib/Row.svelte'
-  import { user } from "../stores/auth";   
-  setContext('currentPage', '/play')
+  import { user } from "../stores/auth";
 </script>
 
 <Meta

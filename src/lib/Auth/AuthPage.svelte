@@ -2,7 +2,7 @@
   import AuthMenu from './AuthMenu.svelte'
   import LoginToView from './LoginToView.svelte'
   import { isAuthenticated } from '../../stores/auth'
-import Menu from '$lib/Regular/Menu.svelte';
+  import Menu from '$lib/Regular/Menu.svelte'
 </script>
 
 {#if !!$isAuthenticated}

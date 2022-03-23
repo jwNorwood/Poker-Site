@@ -5,9 +5,6 @@
   import Page from '$lib/Regular/Page.svelte'
   import Row from '$lib/Row.svelte'
   import Section from '$lib/Section.svelte'
-  import { setContext } from 'svelte'
-
-  setContext('currentPage', '/')
 </script>
 
 <Meta

@@ -1,8 +1,6 @@
 <script lang="ts">
   import Meta from '$lib/Meta.svelte'
   import Page from '$lib/Regular/Page.svelte'
-  import { setContext } from 'svelte'
-  setContext('currentPage', '/about/cookies')
 </script>
 
 <Meta

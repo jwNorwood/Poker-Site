@@ -4,15 +4,16 @@
   import Controls from './Controls.svelte'
   import Bet from './Bet.svelte'
   import Hand from './Hand.svelte'
+  // game action should probably be in in a context so it can be reached in bet component
   let players = [
     {
-      chipCount: 1120,
       seat: 1,
       position: 0,
+      hand: [],
+      chipCount: 1120,
       bet: 0,
       inHand: false,
       allIn: false,
-      hand: [],
       timeBank: 0,
       timeBankUsed: 0,
       actionIsOn: false,
